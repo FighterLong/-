@@ -1,0 +1,380 @@
+<!D0OCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>瀑布流</title>
+		<style type="text/css">
+			body{
+				margin: 0;
+			}
+			#contianer{
+				position: relative;
+			}
+			.box{
+				padding: 5px;
+				float: left;
+			}
+			.box-img{
+				padding: 5px;
+				border: 1px solid #aaa;
+				box-shadow: 0 0 5px #aaa;
+				border-radius: 5px;
+			}
+			.box-img img{
+				width: 150px;
+			}
+		</style>
+		<script src="js/index.js">
+			
+		</script>
+	</head>
+	<body>
+		<div id="contianer">
+			<div class="box">
+				<div class="box-img">
+					<img src="img/11.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/20140625050753571.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/2100552503-3.png"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/23.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/282.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/309.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/3.png"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/31.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/42014-3-8 14.31.57.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/567054.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/57.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/575860.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/t0148df9db34e8d99a0-1380120893720.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/t017b1acd4c65b57e1f-1380120907866.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/t01bb1128247c3a0b8b-1380120898664.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img28.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img25.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img26.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img27.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img29.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img7.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img8.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img9.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/11.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/20140625050753571.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/2100552503-3.png"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/23.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/282.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/309.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/3.png"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/31.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/42014-3-8 14.31.57.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/567054.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/57.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/575860.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/t0148df9db34e8d99a0-1380120893720.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/t017b1acd4c65b57e1f-1380120907866.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/t01bb1128247c3a0b8b-1380120898664.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img28.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img25.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img26.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img27.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img29.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img7.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img8.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img9.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/11.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/20140625050753571.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/2100552503-3.png"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/23.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/282.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/309.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/3.png"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/31.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/42014-3-8 14.31.57.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/567054.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/57.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/575860.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/t0148df9db34e8d99a0-1380120893720.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/t017b1acd4c65b57e1f-1380120907866.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="img/t01bb1128247c3a0b8b-1380120898664.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img28.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img25.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img26.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img27.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img29.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img7.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img8.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-img">
+					<img src="../图片/img9.jpg"/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

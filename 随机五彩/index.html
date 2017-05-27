@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>小玩意——随机五彩</title>
+		<style>
+			html,
+			body{
+				margin: 0;
+				overflow: hidden;
+				background: #000;
+			}
+			.box{
+				background: rgba(255,255,0,1);
+				border-radius: 50%;
+				position: absolute;
+			}
+			.span{
+				width: 500px;
+				height: 60px;
+				line-height: 30px;
+				text-align: center;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto;
+				z-index: 100000000;
+				user-select: none;
+			}
+			p{
+				margin: 0;
+				margin: 0 auto;
+				font-size: 20px;
+				color: #26A6D1;
+				text-shadow: 0 0 10px #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="span">
+			<p>人生本就充满遗憾，由不得我们去后悔，</p>
+			<p>与其默然回首，不如整装前行</p>
+		</div>
+		<script>
+			var count  = 0;
+//			document.onmousemove=function(e){
+//				e = e || window.event;
+//				var div = createEl();
+//				 div.box.keys = setInterval(function(){
+//				 	div.width +=3;
+//				 	div.height+=3;
+//				 	div.opacity -= 0.01;
+//				 	run(div.box,div.width,div.height,div.opacity,e.clientX,e.clientY);
+//				 },20);
+//			}
+			document.onclick = function(e){
+				e = e || window.event;
+				var div = createEl();
+				 div.box.keys = setInterval(function(){
+				 	div.width +=3;
+				 	div.height+=3;
+				 	div.opacity -= 0.01;
+				 	run(div.box,div.width,div.height,div.opacity,e.clientX,e.clientY);
+				 },20);
+			}
+			//随机颜色
+			function roundColor(el){
+				var r = round(0,255);
+				var g = round(0,255);
+				var b = round(0,255);
+				el.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
+			}
+			//生成范围内的随机数
+			function round(min , max){
+				var result;
+				result = Math.random()*(max-min)+min;
+				result = Math.round(result);
+				return result;
+			}
+			//生成坐标随机的元素
+			setInterval(function(){
+				randomEl();
+			},300);
+			function randomEl(){
+					var div = createEl();
+					var x = round(0,parseInt(window.innerWidth));
+					var y = round(0,parseInt(window.innerHeight));
+					div.box.keys=setInterval(function(){
+						div.width +=3;
+					 	div.height+=3;
+					 	div.opacity -= 0.01;
+						run(div.box,div.width,div.height,div.opacity,x,y);
+					},20);
+			}
+			//创建元素
+			function createEl(){
+				if(count>=40){
+					return;
+				}
+				var box=document.createElement('div');
+				box.className = 'box';
+				box.width = box.offsetWidth;
+				box.height = box.offsetHeight;
+				roundColor(box);
+				document.body.appendChild(box);
+				box.opacity  = 1;
+				count++;
+//				console.log(count);
+				return {
+					box: box,
+					width:box.offsetWidth,
+					height : box.offsetHeight,
+					opacity : 1
+				}
+			}
+			//元素的运动
+			function run(el,width,height,opacity,x,y){
+				width +=3;
+				height+=3;
+				opacity -= 0.01;
+			 	el.style.width = width + 'px';
+			 	el.style.height = height +'px';
+			 	el.style.left = x - width/2 + 'px';
+			 	el.style.top = y - height/2 + 'px';
+			 	el.style.opacity = opacity;
+			 	if(width>=300){
+			 		clearInterval(el.keys);
+			 		document.body.removeChild(el);
+			 		count--;
+			 	}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,140 @@
+<!D0OCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<style type="text/css">
+				div{
+					width: 60px;
+					height: 60px;
+					line-height: 60px;
+					text-align: center;
+					border: 1px solid #aaa;
+					float: left;
+					margin-right: 20px;
+				}
+				.active{
+					background: #000;
+					color: #fff;
+					font-size: 20px;
+				}
+			</style>
+	</head>
+	<body>
+		<div class="active">1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<script type="text/javascript">
+			//第一题
+			console.log(getValue('name'));
+			function getValue(str){
+				var urlstr = decodeURI(location.href);
+				var strArr = urlstr.slice(urlstr.indexOf('?')+1);
+				var strArrs = strArr.split('&');
+				for(var i=0;i<strArrs.length;i++){
+					if(strArrs[i].indexOf(str)!=-1){
+						return strArrs[i].slice(strArrs[i].indexOf('=')+1);
+					}
+				}
+				return '';
+			}
+			//第二题
+			var strs = encrypt(8);
+			function encrypt(num){//加密
+				var numb = num.toString(2);//转2进制
+				numb = '0010' +numb+'010';
+				numb = parseInt(numb,2);
+				console.log(num);
+				numb = numb-89757;
+				return numb.toString(2);
+			}
+			decodes(strs);
+			function decodes(str){//解密
+				var num = parseInt(str,2);
+				num +=  89757;
+				num = num.toString(2);
+				num = num.slice(2,-3);
+				return parseInt(num,2);
+			}
+			//第三题
+			console.log(getSquare(6));
+			function getSquare(num){
+				var str = Math.sqrt(num).toString();
+				if(str.indexOf('.')===-1){
+					return true;
+				}
+				return false;
+			}
+			//第四题
+			var list = document.getElementsByTagName('div');
+			var index = 0;
+			var len = list.length;
+			setInterval(setWalk,1000);
+			function setWalk(){
+				index++;
+				var pra = index%len;
+				var out = (index- 1)%len;
+				list[out].className = '';
+				list[pra].className = 'active';
+				
+				
+//				if(index>0){
+//					list[index-1].className = '';
+//				}
+				
+//				if(index==list.length){
+//					index = 0;
+//				}
+//				list[index++].className = 'active';
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			function test( str ){
+				var  binary = str.toString(2);
+				 binary = '0010' +  binary +'010';
+				var decimalism = parseInt( binary,2);
+				decimalism = decimalism - 89757;
+				return decimalism.toString(2);
+			}
+//			console.log(test(2));
+			
+			function decodes( num ){
+				var  decimalism = parseInt( num,2 );
+				decimalism += 89757;
+				var binary = decimalism.toString(2);
+				var count = binary.slice(2,-3);
+				return parseInt(count,2);
+			}
+			console.log(decodes(test(2)));
+			
+		</script>
+	</body>
+</html>
